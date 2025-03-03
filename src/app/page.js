@@ -66,7 +66,7 @@ export default function page() {
 
     <section className='flex flex-col gap-4 laptop:flex-row justify-between items-center mx-auto px-5 py-10 laptop:py-0 container laptop:max-w-6xl border border-red-200 shadow-sm rounded-none tablet:rounded-md bg-red-50'>
       <Image
-        src="/img-placeholder.jpg"
+        src="/presentExcos/oluwatimileyin-akinnirun.jpg"
         width={1000}
         height={1000}
         alt="PDSA logo"
@@ -74,10 +74,10 @@ export default function page() {
       />
       <div className='flex flex-col gap-12'>
         <h2 className='font-bold text-xl laptop:text-2xl text-center'>Words from Our Association President</h2>
-        <p className='text-justify -mt-10'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p className='text-justify -mt-10'>Welcome to the official website of the Political Science and Diplomatic Students Association (PDSA)!<br /><br />As president, it is both an honor and a privilege to lead this vibrant community of students passionate about politics, diplomacy, and global affairs. PDSA is an association of three departments, Political Science, International Relations, and Politics and Law. We are dedicated to fostering leadership, collaboration, and professional growth through events, discussions, and networking opportunities that bridge the gap between theory and practice.<br />This website is your gateway to all we do—whether you’re a student, alum, or professional, we invite you to explore, connect, and join us in shaping a better future.<br /><br />Warm regards,</p>
         <div className='flex flex-col items-center laptop:items-start'>
-          <p className='text-lg font-semibold'>President Name</p>
-          <p className=''>Association President</p>
+          <p className='text-lg font-semibold'>Oluwatimilehin Akinnirun</p>
+          <p className=''>President, PDSA</p>
         </div>
       </div>
     </section>

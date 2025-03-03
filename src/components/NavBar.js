@@ -25,7 +25,7 @@ const NavBar = () => {
       </div>
 
       <div className='hidden laptop:block'>
-        <MenuLinks targetId="next" />
+        <MenuLinks targetId="next" currentId="current" pastId="past" />
       </div>
 
       <div className="hidden laptop:block">
