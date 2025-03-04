@@ -15,77 +15,77 @@ import Image from "next/image";
 export function Slider() {
   const excos = [
     {
-      src: "/presentExcos/eniola-falade-sharon.jpg",
+      src: "/eniola-falade-sharon.jpg",
       name: "Eniola Falade Sharon",
       post: "Social Director"
     },
     {
-      src: "/presentExcos/oluwalusin-ayomikale-esther.jpg",
+      src: "/oluwalusin-ayomikale-esther.jpg",
       name: "Oluwalusin Ayomikale Esther",
       post: "Welfare Director"
     },
     {
-      src: "/presentExcos/oyedele-anita-ilerioluwa.jpg",
+      src: "/oyedele-anita-ilerioluwa.jpg",
       name: "Oyedele Anita Ilerioluwa",
       post: "Academic director (IRD)"
     },
     {
-      src: "/presentExcos/laval-gold-mariam.jpg",
+      src: "/laval-gold-mariam.jpg",
       name: "Lawal Gold Mariam",
       post: "Assistant Social Director"
     },
     {
-      src: "/presentExcos/dahwa-faith.jpg",
+      src: "/dahwa-faith.jpg",
       name: "Dawha Faith",
       post: "General Secretary"
     },
     {
-      src: "/presentExcos/laoye-praise-ifeoluwa.jpg",
+      src: "/laoye-praise-ifeoluwa.jpg",
       name: "Laoye Praise Ifeoluwa",
       post: "Academic Director (PAL)"
     },
     {
-      src: "/presentExcos/akinbode-tosin.jpg",
+      src: "/akinbode-tosin.jpg",
       name: "Akinbode Tosin",
       post: "Asst. Sports Director"
     },
     {
-      src: "/presentExcos/adeyemi-atanda.jpg",
+      src: "/adeyemi-atanda.jpg",
       name: "Adeyemi Atanda",
       post: "Academic Director (Political Science)"
     },
     {
-      src: "/presentExcos/ayodeji-olurakinyo.jpg",
+      src: "/ayodeji-olurakinyo.jpg",
       name: "Ayodeji Olurakinyo",
       post: "Chief Whip"
     },
     {
-      src: "/presentExcos/lekan-oluponna-oluwakiibati.jpg",
+      src: "/lekan-oluponna-oluwakiibati.jpg",
       name: "Lekan-Oluponna Oluwakiibati",
       post: "Asst. General Secretary"
     },
     {
-      src: "/presentExcos/osomah-abigail.jpg",
+      src: "/osomah-abigail.jpg",
       name: "Oshomah Abigail. A",
       post: "Public Relations Officer (PRO) for International Relations and Political Science"
     },
     {
-      src: "/presentExcos/amusan-maxwell.jpg",
+      src: "/amusan-maxwell.jpg",
       name: "Amusan Maxwell",
       post: "PRO, Politics and Law"
     },
     {
-      src: "/presentExcos/afolalu-mosopeoluwa.jpg",
+      src: "/afolalu-mosopeoluwa.jpg",
       name: "Afolalu mosopefoluwa",
       post: "Sports director"
     },
     {
-      src: "/presentExcos/adebayo-boluwatife-victoria.jpg",
+      src: "/adebayo-boluwatife-victoria.jpg",
       name: "Adebayo Boluwatife Victoria",
       post: "PDSA financial secretary"
     },
     {
-      src: "/presentExcos/arowotosona-inioluwa-esther.jpg",
+      src: "/arowotosona-inioluwa-esther.jpg",
       name: "Arowotosuna inioluwa Esther",
       post: "Asst. Welfare director"
     },
@@ -98,7 +98,7 @@ export function Slider() {
           delay: 2000,
         }),
       ]}
-      className="w-full max-w-6xl my-6 relative"
+      className="w-full laptop:max-w-6xl my-6 relative"
     >
       <CarouselContent className="px-4 -ml-2 tablet:-ml-4">
         {excos.map((exco, index) => (
