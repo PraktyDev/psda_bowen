@@ -49,8 +49,8 @@ export default function page() {
         <div className="w-full tablet:w-1/2 relative">
           <div className="relative w-[300px] h-[300px] mx-auto">
             <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-white shadow-lg">
-              <Image
-                src="/dr-leo-asumu.jpg"
+              <img
+                src={"/dr-leo-asumu.jpg"}
                 alt="staff advisor"
                 width={1000}
                 height={1000}
