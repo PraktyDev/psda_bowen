@@ -65,7 +65,7 @@ export default function page() {
     </section>
 
     <section className='flex flex-col gap-4 laptop:flex-row justify-between items-center mx-auto px-5 py-10 laptop:py-0 container laptop:max-w-6xl border border-red-200 shadow-sm rounded-none tablet:rounded-md bg-red-50'>
-      <img
+      <Image
         src="/oluwatimileyin-akinnirun.jpg"
         width={1000}
         height={1000}

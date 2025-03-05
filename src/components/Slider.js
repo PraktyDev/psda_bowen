@@ -109,7 +109,7 @@ export function Slider() {
             <div className="p-1">
               <Card className="">
                 <CardContent className="relative flex aspect-square items-center justify-center p-6">
-                  <img src={exco.src} alt='exco image' width={1000} height={1000} className="object-cover h-96" />
+                  <Image src={exco.src} alt='exco image' width={1000} height={1000} className="object-cover h-96" />
                   <div className="absolute bottom-6 bg-black bg-opacity-70 px-7 mb-2 rounded-md flex flex-col gap-1 items-center justify-center">
                     <span className=" text-base text-center text-wrap text-white font-semibold">{exco.name}</span>
                     <span className=" text-sm text-center text-wrap text-white font-light">{exco.post}</span>
