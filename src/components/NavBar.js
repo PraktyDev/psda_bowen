@@ -29,7 +29,7 @@ const NavBar = () => {
       </div>
 
       <div className="hidden laptop:block">
-        <Link className='text-base rounded-full px-4 py-2 bg-red-500 hover:bg-red-400 text-slate-100 font-semibold' target="blank" href={'https:/bowenstudent.bowen.edu.ng/'}>
+        <Link className='text-base rounded-full px-4 py-2 bg-red-500 hover:bg-red-400 text-slate-100 font-semibold' target="blank" href={'https://bowenstudent.bowen.edu.ng/'}>
           Portal
         </Link> 
       </div>
@@ -55,7 +55,7 @@ const NavBar = () => {
                 <Link className={`link ${pathname === '/news' ? 'text-red-500' : 'text-black font-medium hover:text-red-400'} text-2xl tablet:text-3xl`} href={'/news'}>
                     News
                 </Link> 
-                <Link className='text-base rounded-full px-4 py-2 bg-red-500 hover:bg-red-400 text-slate-100 font-semibold' target="blank" href={'https:/bowenstudent.bowen.edu.ng/'}>
+                <Link className='text-base rounded-full px-4 py-2 bg-red-500 hover:bg-red-400 text-slate-100 font-semibold' target="blank" href={'https://bowenstudent.bowen.edu.ng/'}>
                     Portal
                 </Link>
               </SheetDescription>

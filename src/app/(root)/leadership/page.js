@@ -9,9 +9,9 @@ const page = () => {
 
         <div className='flex flex-col tablet:flex-row justify-center items-center gap-5 max-w-6xl px-5'>
           <ExcoCard src={"/oluwatimileyin-akinnirun.png"} name={'Oluwatimileyin Akinnirun'} post={'President'} className={'tablet:h-96'} className2={'flex tablet:hidden'} />
-          <ExcoCard src={'/abiodun-wonderful-olamide.png'} name={'Abiodun Wonderful Olamide'} post={'Vice President'} department={'(Political Science & International Relations)'} className={'h-96'} />
+          <ExcoCard src={'/abiodun-wonderful-olamide.png'} name={'Abiodun Wonderful Olamide'} post={'Vice President'} department={'(Political Science & International Relations)'} className={''} />
           <ExcoCard src={"/oluwatimileyin-akinnirun.png"} name={'Oluwatimileyin Akinnirun'} post={'President'} className={'tablet:h-96'} className2={'hidden tablet:flex'} />
-          <ExcoCard src={"/aderupoko-temiloluwa-deborah.png"} name={'Aderupoko Temiloluwa Deborah'} post={'Vice President'} department={'(Politics & Law)'} className={'h-96'} />
+          <ExcoCard src={"/aderupoko-temiloluwa-deborah.png"} name={'Aderupoko Temiloluwa Deborah'} post={'Vice President'} department={'(Politics & Law)'} className={''} />
         </div>
 
         <Slider />
