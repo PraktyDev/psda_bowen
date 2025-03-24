@@ -1,88 +1,89 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "./magicui/marquee";
-import Image from "next/image";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { FetchData } from "../../services/apiService";
 
-
-const reviews = [
-  {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
-  },
-];
-
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
-
-const Eventcard = ({
-  img,
-  name,
-  username,
-  body,
-}) => {
+const Eventcard = ({ name, location, image, time }) => {
   return (
-    <figure
-      className={cn(
-        "relative w-64 h-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
-    >
-      <div className="">
-        <img className="rounded-full object-cover" width={32} height={32} alt="event" src={img} />
-      </div>
-    </figure>
+    <Dialog>
+      <DialogTrigger asChild>
+        <div className=" w-full mx-1 group/card">
+          <div
+            className={cn(
+              "cursor-pointer overflow-hidden relative card h-96 w-96 rounded-md mx-auto backgroundImage flex flex-col justify-end p-4 bg-cover"
+            )}
+            style={{ backgroundImage: `url(${image})` }}
+          >
+            <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
+            <div className="flex flex-col">
+              <h1 className="font-bold text-xl tablet:text-2xl text-gray-50 relative z-10">
+                {name}
+              </h1>
+              <p className="font-normal truncate text-sm text-gray-50 relative z-10">
+                {location}
+              </p>
+            </div>
+          </div>
+        </div>
+      </DialogTrigger>
+      <DialogContent className="p-1.5">
+        <DialogHeader>
+          <DialogTitle></DialogTitle>
+          <DialogDescription></DialogDescription>
+        </DialogHeader>
+        <div className="w-full">
+          <div
+            className={cn(
+              "cursor-pointer overflow-hidden relative card h-96 rounded-md max-w-sm mx-auto backgroundImage flex flex-col justify-end p-4 bg-cover"
+            )}
+            style={{ backgroundImage: `url(${image})` }}
+          >
+            <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
+            <div className="text content">
+              <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                {name}
+              </h1>
+              <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
+                {location}
+                <br />
+                {time}
+              </p>
+            </div>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 };
 
-export function MarqueeEvent() {
+export async function MarqueeEvent() {
+  const eventsData = await FetchData("GET", "/events");
+
+  const events = eventsData.events;
+
+  const firstRow = events.slice(0, events.length / 2);
+  const secondRow = events.slice(events.length / 2);
+
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
       <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <Eventcard key={review.username} {...review} />
+        {firstRow.map((event) => (
+          <Eventcard key={event.id} {...event} />
         ))}
       </Marquee>
       <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <Eventcard key={review.username} {...review} />
+        {secondRow.map((event) => (
+          <Eventcard key={event.id} {...event} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
     </div>
   );
 }

@@ -12,10 +12,10 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { useEffect } from "react"
-import axios from "axios"
 import { toast } from "sonner"
 import { Oval  } from 'react-loader-spinner'
 import { Mail } from "lucide-react"
+import { FetchData } from "../../services/apiService";
 
 
 const formSchema = z.object({
@@ -37,7 +37,7 @@ const Subscription = () => {
       const onSubmit = async (values) => {
 
         try {
-        //   await axios.post('/api/send-subscribe', values)
+          await FetchData("POST", "/subscriber", values);
           toast('Subcribed')
         } catch (error) {
           toast("Couldn't subscribe, try again later")

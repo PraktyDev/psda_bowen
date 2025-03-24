@@ -25,9 +25,7 @@ import {
 import { useEffect } from "react";
 import axios from "axios";
 import { toast } from "sonner";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -54,25 +52,15 @@ const page = () => {
 
   const onSubmit = async (values) => {
     try {
-      //   await axios.post('/api/auth/signup', values)
-      //   router.push('/admin/dashboard')
-      //   await signIn("Credentials", {
-      //     redirect: false,
-      // username: values.username,
-      // password: values.password,
-      //     callbackUrl: '/admin/dashboard'
-      //   });
-      await signIn("credentials", {
-        username: values.username,
-        password: values.password,
-        redirectTo: "/admin/dashboard",
-      });
-      router.push("/admin/dashboard");
-      toast("SignIn Success");
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/admin/login`, values);
+      localStorage.setItem('accessToken', response.data.token);
+      toast("Login success")
+      router.push('/admin/dashboard')
     } catch (error) {
-      toast("SignIn failed");
+      const err = error.response.data.message
+      toast(err);
     }
-  };
+  }
 
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -88,10 +76,10 @@ const page = () => {
             <div className="flex-1">
               <CardHeader className="p-0 mb-4">
                 <CardTitle className="text-2xl font-bold text-[#0A416F]">
-                  Sign In
+                  Login
                 </CardTitle>
                 <CardDescription>
-                  Enter admin details to sign in.
+                  Enter admin details to login.
                 </CardDescription>
               </CardHeader>
               <Form {...form}>
@@ -149,10 +137,10 @@ const page = () => {
                           color="white"
                           ariaLabel="oval-loading"
                         />{" "}
-                        <p>Signing In...</p>
+                        <p>Logging In...</p>
                       </div>
                     ) : (
-                      <div>Sign In</div>
+                      <div>Login</div>
                     )}
                   </Button>
                 </form>
