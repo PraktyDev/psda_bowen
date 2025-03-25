@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { FetchData } from "../../../../services/apiService";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const page = async () => {
   const newsData = await FetchData("GET", "/news");
@@ -62,6 +63,34 @@ const page = async () => {
                   </CardContent>
                 </Card>
               </Link>
+              // <Link key={item.id} href={`/news/${item.id}`} className="group">
+              //   <article className="overflow-hidden rounded-lg border bg-background transition-colors hover:bg-accent/50">
+              //     <div className="relative w-full overflow-hidden">
+              //       <Image
+              //         src={item.image}
+              //         alt={`${item.title} news picture`}
+              //         fill
+              //         className="object-cover transition-transform duration-300 group-hover:scale-105"
+              //         priority={false}
+              //       />
+              //     </div>
+              //     <div className="p-4">
+              //       <time className="text-sm text-muted-foreground">
+              //         Posted: {formatDate(item.createdAt)}
+              //       </time>
+              //       <h2 className="mt-2 text-xl font-semibold tracking-tight">
+              //         {item.title}
+              //       </h2>
+              //       <p className="mt-2 line-clamp-3 truncate text-muted-foreground">
+              //         {item.description}
+              //       </p>
+              //       <div className="mt-4 flex gap-1 items-center text-sm font-medium text-primary">
+              //         Read more 
+              //         <ArrowRight size={14} />
+              //       </div>
+              //     </div>
+              //   </article>
+              // </Link>
             ))}
         </div>
       </div>
