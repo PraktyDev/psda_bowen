@@ -19,10 +19,10 @@ const page = () => {
         <div id="past" className="text-2xl laptop:text-4xl my-4 py-2 px-8 bg-red-600 bg-opacity-30 text-red-600 font-semibold rounded-lg">Past Executives</div>
 
         <div className='grid grid-cols-2 laptop:grid-cols-3 gap-5 px-5'>
-          <PastExcoCard src={'/frank-seiyefa-okaikpe.png'} name={'Frank Seiyera Okiakpe'} year={'2015 - 2017'} className={'object-contain'} />
+          <PastExcoCard src={'/aborisade-cyril.png'} name={'Frank Seiyera Okiakpe'} year={'2015 - 2017'} className={'object-contain'} />
           <PastExcoCard src={'/kolapo-joshua.png'} name={'Kolapo Joshua'} year={'2017 - 2018'} className={'object-cover'} />
           <PastExcoCard src={'/emmanuel-ochoche.png'} name={'Emmanuel Ochoche'} year={'2020 - 2021'} className={'object-cover'} />
-          <PastExcoCard src={'/aborisade-cyril.png'} name={'Aborisade Cyril'} year={'2021 - 2022'} className={'object-contain'} />
+          <PastExcoCard src={'/frank-seiyefa-okaikpe.png'} name={'Aborisade Cyril'} year={'2021 - 2022'} className={'object-contain'} />
           <PastExcoCard src={'/chiebuliem-uzoma-nwabike.png'} name={'Chiebuliem Uzoma Nwebuike'} year={'2023 -2024'} className={'object-cover'} />
         </div>
       </section>
