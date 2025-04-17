@@ -89,6 +89,11 @@ export function Slider() {
       name: "Arowotosuna inioluwa Esther",
       post: "Asst. Welfare director"
     },
+    {
+      src: "/treasurer.jpg",
+      name: "Augustine Precious",
+      post: "Treasurer"
+    },
   ]  
 
   return (
